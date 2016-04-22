@@ -17,9 +17,9 @@
 				text-align: center;
 			}
 			.card {
-				display: inline-block;
 				vertical-align: bottom;
 				margin: 0.5cm;
+				position: relative;
 			}
 			h2 {
 				font-size: 2em;
@@ -34,8 +34,25 @@
 		
 		<script id="card-template" type="text/x-handlebars-template">
 			<article class="card">
-				<h1 class="title">{{title}}</h1>
-				<p class="description">{{description}}</p>
+				<div class="location">
+					<h1 class="title">{{location.title}}</h1>
+					<p class="ability">{{location.ability}}</p>
+					<p class="resources">
+						{{#if location.resources.food}}
+							<span class="food"></span>
+						{{/if}}
+					</p>
+				</div>
+				<img src="{{image}}">
+				<div class="trait">
+					<h1 class="title">{{trait.title}}</h1>
+					<p class="ability">{{trait.ability}}</p>
+					<p class="resources">
+						{{#if location.resources.food}}
+							<span class="food"></span>
+						{{/if}}
+					</p>
+				</div>
 			</article>
 		</script>
 		

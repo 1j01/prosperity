@@ -10,7 +10,7 @@
 	color: white;
 	
 	width: 15em;
-	height: 20em;
+	height: 23em;
 	border-radius: 0.5rem;
 	
 	background: repeating-radial-gradient(
@@ -22,6 +22,14 @@
 		#4b026f 20px
 	);
 	background-position: bottom;
+	
+	display: inline-flex;
+	flex-direction: column;
+}
+.card > * {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
 }
 
 .back {
@@ -54,9 +62,23 @@
 	font-family: serif;
 }
 
-.description {
+.ability {
 	padding: 0.5em;
 	background: rgba(129, 116, 212, 0.6);
+	font-size: 0.8em;
+	flex: 1;
+	text-align: start;
+}
+
+.trait {
+	transform: rotate(0.5turn);
+	/*position: absolute;*/
+	/*bottom: 0;*/
+	/*width: 100%;*/
+}
+
+img {
+	max-width: 100%;
 }
 
 #card-sets > h2 {

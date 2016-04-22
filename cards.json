@@ -1,13 +1,31 @@
 {
-	"Placeholder Cards of Ignorance":
+	"Fortresses":
 	[
 		{
-			"title": "The Tower of Doom",
-			"description": "Dooooom!"
+			"image": "images/aqua-city.jpg",
+			"location": {
+				"title": "Windguard Spire",
+				"ability": "If Advanced: +1 VP for your fortresses",
+				"resources": ["magic"]
+			},
+			"trait": {
+				"title": "Gryphon Rider Garrison",
+				"ability": "+1 VP for your developed fortresses",
+				"resources": ["magic"]
+			}
 		},
 		{
-			"title": "The Tower of Boom",
-			"description": "Kabooom!"
+			"image": "images/aqua-city.jpg",
+			"location": {
+				"title": "Redstar Citadel",
+				"ability": "If Advanced: The opponent must discard one of their advancement cards at the end of the game",
+				"resources": ["technology"]
+			},
+			"trait": {
+				"title": "Siege workshop",
+				"ability": "Your fortress locations are considered Advanced",
+				"resources": ["technology"]
+			}
 		}
 	]
 }
