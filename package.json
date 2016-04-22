@@ -2,10 +2,17 @@
   "name": "prosperity",
   "version": "0.1.0",
   "description": "A drafting game about building fantasy cities",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/1j01/prosperity.git"
+  },
+  "bugs": {
+    "url": "http://github.com/1j01/prosperity/issues"
+  },
   "scripts": {
     "export": "coffee src/export.coffee"
   },
   "devDependencies": {
-    "card-game-generator": "~1.0.0"
+    "card-game-generator": "^0.1.0"
   }
 }
