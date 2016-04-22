@@ -6,18 +6,16 @@ CardGameGenerator = require "card-game-generator"
 # for fname in fs.readdirSync "images/counters"
 # 	if fname.match /\.png/
 # 		counter_name = fname.replace /[\-.].*/, ""
-# 		if m = fname.match /-(plus|minus)/
-# 			plus_minus = m[1]
+# 		if m = fname.match /-(front|back)/
+# 			front_back = m[1]
 # 			counters[counter_name] ?= {type: "tile"}
-# 			counters[counter_name][plus_minus] = fname
+# 			counters[counter_name][front_back] = fname
 # 		else
 # 			counters[counter_name] = {type: "token", fname}
 
 cgg = new CardGameGenerator
 	cardSets: JSON.parse(fs.readFileSync("cards.json", "utf8"))
 	# counters: counters
-	# page: "index.html"
-	# saveName: "Prosperity"
 	imagesURL: "https://raw.githubusercontent.com/1j01/prosperity/gh-pages/images/"
 	exportedImagesURL: "https://raw.githubusercontent.com/1j01/prosperity/gh-pages/export/images/"
 

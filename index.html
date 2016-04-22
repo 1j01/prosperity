@@ -59,7 +59,7 @@
 						container.appendChild(h2);
 						for(var i = 0; i < cards_in_set.length; i++){
 							var card = cards_in_set[i];
-							container.innerHTML += card_template(card);
+							container.innerHTML += card_template(card).trim();
 						}
 						if(export_only){
 							while(i < 10*7){
