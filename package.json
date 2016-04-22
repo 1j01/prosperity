@@ -1,0 +1,11 @@
+{
+  "name": "prosperity",
+  "version": "0.1.0",
+  "description": "A drafting game about building fantasy cities",
+  "scripts": {
+    "export": "coffee src/export.coffee"
+  },
+  "devDependencies": {
+    "card-game-generator": "~1.0.0"
+  }
+}

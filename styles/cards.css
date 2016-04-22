@@ -1,0 +1,65 @@
+
+:root,
+.card {
+	font-size: 20px;
+	font-family: sans-serif;
+}
+
+.card {
+	background: #447;
+	color: white;
+	
+	width: 15em;
+	height: 20em;
+	border-radius: 0.5rem;
+	
+	background: repeating-radial-gradient(
+		circle
+		at 50% 150%,
+		purple,
+		purple 10px,
+		#4b026f 10px, 
+		#4b026f 20px
+	);
+	background-position: bottom;
+}
+
+.back {
+	background:
+		linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+		linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+		linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+		linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+		linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+		linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+		background-color: #131313;
+		background-size: 20px 20px;
+	background: repeating-radial-gradient(
+		circle,
+		purple,
+		purple 10px,
+		#4b026f 10px, 
+		#4b026f 20px
+	);
+}
+
+.title {
+	font-size: 1.5em;
+	padding: 0.2rem;
+	background: #247;
+	background: #2A7FFF;
+	border-radius: 0.5rem;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+	font-family: serif;
+}
+
+.description {
+	padding: 0.5em;
+	background: rgba(129, 116, 212, 0.6);
+}
+
+#card-sets > h2 {
+	font-size: 2em;
+	margin: 0.3em;
+}

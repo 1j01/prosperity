@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Prosperity</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="styles/reset.css">
+		<link rel="stylesheet" href="styles/cards.css">
+		<style type="text/css">
+			body, html {
+				width: 100%;
+				height: 100%;
+				margin: 0;
+				border: 0;
+				padding: 0;
+				font-family: "Helvetica";
+				text-align: center;
+			}
+			.card {
+				display: inline-block;
+				vertical-align: bottom;
+				margin: 0.5cm;
+			}
+			h2 {
+				font-size: 2em;
+				margin: 0.2em;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="card-sets"></div>
+		<script src="lib/handlebars-v4.0.5.js"></script>
+		<!--
+		<script src="lib/jquery-2.1.1.min.js"></script>
+		<script src="lib/coffee-script.js"></script>
+		<script src="src/render.coffee" type="text/coffeescript"></script>
+		-->
+		<script id="card-template" type="text/x-handlebars-template">
+			<article class="card">
+				<h1 class="title">{{title}}</h1>
+				<p class="description">{{description}}</p>
+			</article>
+		</script>
+		<script>
+			var card_template_source = document.getElementById("card-template").textContent;
+			var card_template = Handlebars.compile(card_template_source);
+			
+			var container = document.getElementById("card-sets");
+			
+			var render_cards = function(card_sets){
+				
+				export_only = location.hash.replace(/#/, "");
+				
+				for(set_name in card_sets){
+					if(!export_only || export_only == set_name){
+						var cards_in_set = card_sets[set_name];
+						var h2 = document.createElement("h2");
+						h2.textContent = set_name;
+						container.appendChild(h2);
+						for(var i = 0; i < cards_in_set.length; i++){
+							var card = cards_in_set[i];
+							container.innerHTML += card_template(card);
+						}
+						if(export_only){
+							while(i < 10*7){
+								container.innerHTML += "<div class='card back'/>";
+								i += 1;
+							}
+						}
+					}
+				}
+				if(!export_only || export_only == "Back"){
+					container.innerHTML += "<h2>Back</h2>";
+					container.innerHTML += "<div class='card back'/>";
+				}
+			};
+			
+			var request = new XMLHttpRequest();
+			request.open('GET', 'cards.json', true);
+			
+			request.onload = function() {
+				if (this.response) {
+					var data = JSON.parse(this.response);
+					render_cards(data);
+				} else {
+					throw new Error("GET cards.json status code " + this.status);
+				}
+			};
+			
+			request.onerror = function() {
+				// There was a connection error of some sort
+				throw new Error("Failed to GET cards.json");
+			};
+			
+			request.send();
+			
+		</script>
+	</body>
+</html>
