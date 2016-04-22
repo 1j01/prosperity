@@ -29,18 +29,16 @@
 	</head>
 	<body>
 		<div id="card-sets"></div>
+		
 		<script src="lib/handlebars-v4.0.5.js"></script>
-		<!--
-		<script src="lib/jquery-2.1.1.min.js"></script>
-		<script src="lib/coffee-script.js"></script>
-		<script src="src/render.coffee" type="text/coffeescript"></script>
-		-->
+		
 		<script id="card-template" type="text/x-handlebars-template">
 			<article class="card">
 				<h1 class="title">{{title}}</h1>
 				<p class="description">{{description}}</p>
 			</article>
 		</script>
+		
 		<script>
 			var card_template_source = document.getElementById("card-template").textContent;
 			var card_template = Handlebars.compile(card_template_source);

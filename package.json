@@ -13,6 +13,6 @@
     "export": "coffee src/export.coffee"
   },
   "devDependencies": {
-    "card-game-generator": "^0.1.0"
+    "card-game-generator": "^0.2.2"
   }
 }
