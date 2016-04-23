@@ -6,22 +6,9 @@
 }
 
 .card {
-	background: #447;
-	color: white;
-	
 	width: 15em;
 	height: 23em;
 	border-radius: 0.5rem;
-	
-	background: repeating-radial-gradient(
-		circle
-		at 50% 150%,
-		purple,
-		purple 10px,
-		#4b026f 10px, 
-		#4b026f 20px
-	);
-	background-position: bottom;
 	
 	display: inline-flex;
 	flex-direction: column;
@@ -34,28 +21,27 @@
 
 .back {
 	background:
-		linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
-		linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
-		linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
-		linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
-		linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
-		linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
-		background-color: #131313;
-		background-size: 20px 20px;
-	background: repeating-radial-gradient(
-		circle,
-		purple,
-		purple 10px,
-		#4b026f 10px, 
-		#4b026f 20px
-	);
+		linear-gradient(to bottom, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%),
+		url("../images/card-bg.jpg");
+	background-blend-mode: multiply;
+	/*background: url("../images/card-bg.jpg");*/
+}
+
+.card,
+.title,
+img {
+	box-sizing: border-box;
+	border: 3px solid #2B2B2B;
+}
+.title,
+img {
+	margin: -3px;
+	margin-bottom: 0;
 }
 
 .title {
 	font-size: 1.5em;
 	padding: 0.2rem;
-	background: #247;
-	background: #2A7FFF;
 	border-radius: 0.5rem;
 	border-bottom-left-radius: 0;
 	border-bottom-right-radius: 0;
@@ -64,7 +50,13 @@
 
 .ability {
 	padding: 0.5em;
-	background: rgba(129, 116, 212, 0.6);
+	/*background: rgba(23, 23, 23, 0.8);*/
+	/*color: white;*/
+	/*background: rgba(255, 255, 255, 0.4);*/
+	/*color: black;*/
+	background: black;
+	/*color: white;*/
+	color: #D4D4D4;
 	font-size: 0.8em;
 	flex: 1;
 	text-align: start;
@@ -72,13 +64,32 @@
 
 .trait {
 	transform: rotate(0.5turn);
-	/*position: absolute;*/
-	/*bottom: 0;*/
-	/*width: 100%;*/
+	/*background: #FFC300;*/
+}
+.trait h1 {
+	/*background: #FF6500;*/
+	/*background: grey;*/
+	/*background: #943378;*/
+	background: linear-gradient(to bottom, rgba(240,170,66,1) 0%, rgba(240,132,0,1) 100%);
+
+	color: white;
+}
+.location {
+	/*background: #9BFF77;*/
+}
+.location h1 {
+	/*background: #2A7FFF;*/
+	/*background: #009438;*/
+	background: linear-gradient(to bottom, rgba(73,155,234,1) 0%, rgba(32,124,229,1) 100%);
+	color: white;
 }
 
 img {
 	max-width: 100%;
+}
+
+.card:nth-of-type(2) img {
+	-webkit-filter: hue-rotate(870deg);
 }
 
 #card-sets > h2 {

@@ -28,8 +28,8 @@ cgg.renderCards
 	page: "index.html"
 	cardWidth: 300
 	cardHeight: 400
-	scale: 2
-	debug: off
+	scale: 1
+	debug: on
 	to: "export/images"
 	(err)->
 		throw err if err
